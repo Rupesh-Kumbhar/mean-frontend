@@ -15,21 +15,18 @@
 
   <!-- <hr /> -->
   <div class="col-sm-12 p-0 row m-0">
-    <div class="col-sm-4">
+    <div class="col-sm-4" *ngFor="let employee of employees">
       <div class="card mb-3">
         <div class="card-body">
           <div class="col-sm-12 p-0">
-            <a routerLink="" class="card-title">name</a>
+            <a routerLink="" class="card-title">{{ employee.name }}</a>
           </div>
-
           <div class="col-sm-12 p-0">
-            <h6 class="card-subtitle mb-2 text-muted">position</h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{ employee.position }}</h6>
           </div>
-
           <div class="col-sm-12 p-0">
-            <span class="badge badge-danger">dept</span>
+            <span class="badge badge-danger">{{ employee.dept }}</span>
           </div>
-
           <hr />
           <button type="button" class="btn btn-sm btn-outline-primary mr-2">
             Edit
@@ -41,80 +38,5 @@
       </div>
     </div>
 
-    <div class="col-sm-4">
-      <div class="card mb-3">
-        <div class="card-body">
-          <div class="col-sm-12 p-0">
-            <a routerLink="" class="card-title">name</a>
-          </div>
-
-          <div class="col-sm-12 p-0">
-            <h6 class="card-subtitle mb-2 text-muted">position</h6>
-          </div>
-
-          <div class="col-sm-12 p-0">
-            <span class="badge badge-danger">dept</span>
-          </div>
-
-          <hr />
-          <button type="button" class="btn btn-sm btn-outline-primary mr-2">
-            Edit
-          </button>
-          <button type="button" class="btn btn-sm btn-outline-danger">
-            Delete
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card mb-3">
-        <div class="card-body">
-          <div class="col-sm-12 p-0">
-            <a routerLink="" class="card-title">name</a>
-          </div>
-
-          <div class="col-sm-12 p-0">
-            <h6 class="card-subtitle mb-2 text-muted">position</h6>
-          </div>
-
-          <div class="col-sm-12 p-0">
-            <span class="badge badge-danger">dept</span>
-          </div>
-
-          <hr />
-          <button type="button" class="btn btn-sm btn-outline-primary mr-2">
-            Edit
-          </button>
-          <button type="button" class="btn btn-sm btn-outline-danger">
-            Delete
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card mb-3">
-        <div class="card-body">
-          <div class="col-sm-12 p-0">
-            <a routerLink="" class="card-title">name</a>
-          </div>
-
-          <div class="col-sm-12 p-0">
-            <h6 class="card-subtitle mb-2 text-muted">position</h6>
-          </div>
-
-          <div class="col-sm-12 p-0">
-            <span class="badge badge-danger">dept</span>
-          </div>
-
-          <hr />
-          <button type="button" class="btn btn-sm btn-outline-primary mr-2">
-            Edit
-          </button>
-          <button type="button" class="btn btn-sm btn-outline-danger">
-            Delete
-          </button>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
