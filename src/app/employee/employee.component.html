@@ -7,7 +7,7 @@
     </div>
 
     <div class="col ml-auto text-right">
-      <button type="button" class="btn btn-outline-success">
+      <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
         <i class="fa fa-plus"></i> Add Employee
       </button>
     </div>
@@ -28,7 +28,7 @@
             <span class="badge badge-danger">{{ employee.dept }}</span>
           </div>
           <hr />
-          <button type="button" class="btn btn-sm btn-outline-primary mr-2">
+          <button type="button" class="btn btn-sm btn-outline-primary mr-2" data-toggle="modal" data-target="#exampleModalCenter">
             Edit
           </button>
           <button type="button" class="btn btn-sm btn-outline-danger">
@@ -38,5 +38,49 @@
       </div>
     </div>
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add or Update Employee</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+            <label>Enter Name</label>
+            <input type="text" class="form-control" formControlName="name">
+            <small class="form-text text-danger">Please Enter Name.</small>
+        </div>
+
+        <div class="form-group">
+            <label>Enter position</label>
+            <input type="text" class="form-control" formControlName="position">
+            <small 
+                class="form-text text-danger">Please Enter position.</small>
+        </div>
+
+        <div class="form-group">
+            <label>Enter Department</label>
+
+            <select class="custom-select" formControlName="dept">
+                <option value="Design">Design</option>
+                <option value="Development">Development</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary"
+          data-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-primary" >
+          Update or Add Employee
+      </button>
+  </div>
+    </div>
+  </div>
+</div>
   </div>
 </div>
